@@ -1,6 +1,6 @@
 # CardGame-cocos2dx
 a cardgamedome by cocos2dx
-
+使用方法，新建一个cocos2dx文件，点击进入.sln文件，然后将class的除了MainmenuScene的.cpp和.h文件添加进入右侧的src里，将资源文件导入cocos2dx项目目录下的Resources文件
 Classes/
 
 ├── AppDelegate.h/cpp # 应用程序入口和生命周期管理
