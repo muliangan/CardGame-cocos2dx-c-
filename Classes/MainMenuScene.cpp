@@ -1,6 +1,7 @@
 #include "MainMenuScene.h"
 #include "scene/CardTestScene.h"
 USING_NS_CC;
+#if 0
 cocos2d::Vec2 buttonPos;
 Scene* MainMenuScene::createScene()
 {
@@ -88,3 +89,4 @@ void MainMenuScene::onLevelButtonClicked(int levelNumber)
         Director::getInstance()->replaceScene(testScene);
     }
 }
+#endif

@@ -2,7 +2,7 @@
 #include "cocos2d.h"
 
 USING_NS_CC;
-
+#if 0
 // 主菜单场景
 class MainMenuScene : public Scene {
 public:
@@ -23,3 +23,4 @@ private:
     // 创建关卡选择按钮（使用 MenuItemLabel）
     MenuItemLabel* createLevelButton(int levelNumber, const Vec2& position);
 };
+#endif

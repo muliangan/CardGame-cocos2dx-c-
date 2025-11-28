@@ -95,7 +95,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = MainMenuScene::createScene();
+    auto scene = MenuScene::createScene();
+
+    if (!scene) {
+        CCLOG("AppDelegate::applicationDidFinishLaunching: Failed to create scene!");
+        return false;
+    }
 
     // run
     director->runWithScene(scene);
