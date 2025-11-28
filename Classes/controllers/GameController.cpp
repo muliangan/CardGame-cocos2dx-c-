@@ -29,27 +29,17 @@ bool GameController::startGame(int levelId)
 {
     _currentLevelId = levelId;
     
-    CCLOG("GameController::startGame: Starting level %d", levelId);
-    
     // 1. 加载关卡配置
     LevelConfig levelConfig = LevelConfigLoader::loadLevelConfig(levelId);
     if (levelConfig.playfieldCards.empty() && levelConfig.stackCards.empty()) {
-        CCLOG("GameController::startGame: Failed to load level config for level %d", levelId);
         return false;
     }
-    
-    CCLOG("GameController::startGame: Loaded level config - PlayField: %d cards, Stack: %d cards",
-        static_cast<int>(levelConfig.playfieldCards.size()),
-        static_cast<int>(levelConfig.stackCards.size()));
     
     // 2. 生成 GameModel
     _gameModel = GameModelFromLevelGenerator::generateGameModel(levelConfig);
     if (!_gameModel) {
-        CCLOG("GameController::startGame: Failed to generate game model");
         return false;
     }
-    
-    CCLOG("GameController::startGame: GameModel generated successfully");
     
     // 3. 初始化子控制器
     initSubControllers();
@@ -59,7 +49,6 @@ bool GameController::startGame(int levelId)
         initGameView();
     }
     
-    CCLOG("GameController::startGame: Game started successfully");
     return true;
 }
 
@@ -82,25 +71,21 @@ void GameController::initSubControllers()
     
     // 初始化 UndoManager
     _undoManager->init(_gameModel);
-    CCLOG("GameController::initSubControllers: UndoManager initialized");
     
     // 初始化 PlayFieldController
     if (_playFieldController) {
         _playFieldController->init(_gameModel, _undoManager, this);
-        CCLOG("GameController::initSubControllers: PlayFieldController initialized");
     }
     
     // 初始化 StackController
     if (_stackController) {
         _stackController->init(_gameModel, _undoManager, this);
-        CCLOG("GameController::initSubControllers: StackController initialized");
     }
 }
 
 void GameController::initGameView()
 {
     if (!_gameView || !_gameModel) {
-        CCLOG("GameController::initGameView: GameView or GameModel is null");
         return;
     }
     
@@ -147,8 +132,6 @@ void GameController::initGameView()
         // 初始按钮状态
         stackView->updateUndoButtonState(this->canUndo());
     }
-    
-    CCLOG("GameController::initGameView: GameView initialized successfully");
 }
 bool GameController::undo()
 {
@@ -159,11 +142,8 @@ bool GameController::undo()
     // 获取撤销快照
     UndoSnapshot* snapshot = _undoManager->undo();
     if (!snapshot) {
-        CCLOG("GameController::undo: Cannot undo");
         return false;
     }
-    
-    CCLOG("GameController::undo: Undo successful, restoring view state");
     
     // 恢复Model后，需要更新View以匹配Model状态
     
@@ -246,7 +226,6 @@ bool GameController::undo()
                     _gameView->_stackCardViews.erase(stackIt);
                 }
             }
-            CCLOG("GameController::undo: Removed CardView for card ID %d", cv->getModel() ? cv->getModel()->getId() : -1);
         }
     }
     
@@ -274,8 +253,6 @@ bool GameController::undo()
                 playFieldView->addCardView(cardView);
                 // 添加到GameView的内部列表
                 _gameView->_fieldCardViews.push_back(cardView);
-                CCLOG("GameController::undo: Created CardView for PlayField card ID %d (Model ptr: %p)", 
-                      cardModel->getId(), cardModel);
             }
         }
     }
@@ -300,8 +277,6 @@ bool GameController::undo()
                 stackView->addCardView(cardView);
                 // 添加到GameView的内部列表
                 _gameView->_stackCardViews.push_back(cardView);
-                CCLOG("GameController::undo: Created CardView for Stack card ID %d (Model ptr: %p)", 
-                      cardModel->getId(), cardModel);
             }
         }
     }
@@ -318,8 +293,6 @@ bool GameController::undo()
             _gameView->playUndoAnimation(cardView, posInfo.worldPosition, posInfo.isInStack);
         }
     }
-    
-    CCLOG("GameController::undo: View restoration complete");
     
     // 更新回退按钮状态
     if (_gameView && _gameView->getStackView()) {
@@ -345,7 +318,5 @@ void GameController::recordUndo()
     
     // 记录到UndoManager
     _undoManager->record(cardPositions);
-    
-    CCLOG("GameController::recordUndo: Recorded %d card positions", static_cast<int>(cardPositions.size()));
 }
 

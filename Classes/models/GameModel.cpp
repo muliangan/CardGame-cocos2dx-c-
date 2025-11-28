@@ -81,8 +81,14 @@ CardModel* GameModel::moveCardToTop(CardModel* card)
     // 获取顶部牌（被替换的牌）
     CardModel* oldTopCard = _stackCards.back();
     
-    // 交换vector中的位置：将点击的卡牌和顶部牌交换
-    std::swap(*clickedIt, _stackCards.back());
+    // 移除原来的顶部牌
+    _stackCards.pop_back();
+    
+    // 从原位置移除点击的卡牌
+    _stackCards.erase(clickedIt);
+    
+    // 将点击的卡牌添加到顶部
+    _stackCards.push_back(card);
     
     return oldTopCard;
 }
