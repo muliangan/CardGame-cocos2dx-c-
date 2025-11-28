@@ -1,95 +1,95 @@
-# CardGame-cocos2dx-c-
+# CardGame-cocos2dx
 a cardgamedome by cocos2dx
 
 Classes/
 
-©À©¤©¤ AppDelegate.h/cpp # Ó¦ÓÃ³ÌÐòÈë¿ÚºÍÉúÃüÖÜÆÚ¹ÜÀí
+â”œâ”€â”€ AppDelegate.h/cpp # åº”ç”¨ç¨‹åºå…¥å£å’Œç”Ÿå‘½å‘¨æœŸç®¡ç†
 
-©À©¤©¤ MainMenuScene.h/cpp # Ö÷²Ëµ¥³¡¾°
+â”œâ”€â”€ MainMenuScene.h/cpp # ä¸»èœå•åœºæ™¯
 
-©¦
+â”‚
 
-©À©¤©¤ scene/ # ÓÎÏ·³¡¾°²ã
+â”œâ”€â”€ scene/ # æ¸¸æˆåœºæ™¯å±‚
 
-©¦ ©À©¤©¤ GameScene.h/cpp # ÓÎÏ·Ö÷³¡¾°
+â”‚ â”œâ”€â”€ GameScene.h/cpp # æ¸¸æˆä¸»åœºæ™¯
 
-©¦ ©¸©¤©¤ CardTestScene.h/cpp # ¿¨ÅÆ²âÊÔ³¡¾°£¨µ÷ÊÔÓÃ£©
+â”‚ â””â”€â”€ CardTestScene.h/cpp # å¡ç‰Œæµ‹è¯•åœºæ™¯ï¼ˆè°ƒè¯•ç”¨ï¼‰
 
-©¦
+â”‚
 
-©À©¤©¤ models/ # Êý¾ÝÄ£ÐÍ²ã£¨ÔËÐÐÊ±¶¯Ì¬Êý¾Ý£©
+â”œâ”€â”€ models/ # æ•°æ®æ¨¡åž‹å±‚ï¼ˆè¿è¡Œæ—¶åŠ¨æ€æ•°æ®ï¼‰
 
-©¦ ©À©¤©¤ CardModel.h/cpp # ¿¨ÅÆÊý¾ÝÄ£ÐÍ
+â”‚ â”œâ”€â”€ CardModel.h/cpp # å¡ç‰Œæ•°æ®æ¨¡åž‹
 
-©¦ ©¸©¤©¤ GameModel.h/cpp # ÓÎÏ·×´Ì¬Êý¾ÝÄ£ÐÍ
+â”‚ â””â”€â”€ GameModel.h/cpp # æ¸¸æˆçŠ¶æ€æ•°æ®æ¨¡åž‹
 
-©¦
+â”‚
 
-©À©¤©¤ views/ # ÊÓÍ¼²ã£¨UIÏÔÊ¾ºÍÓÃ»§½»»¥£©
+â”œâ”€â”€ views/ # è§†å›¾å±‚ï¼ˆUIæ˜¾ç¤ºå’Œç”¨æˆ·äº¤äº’ï¼‰
 
-©¦ ©À©¤©¤ CardView.h/cpp # ¿¨ÅÆÊÓÍ¼£¨µ¥¸ö¿¨ÅÆµÄÏÔÊ¾£©
+â”‚ â”œâ”€â”€ CardView.h/cpp # å¡ç‰Œè§†å›¾ï¼ˆå•ä¸ªå¡ç‰Œçš„æ˜¾ç¤ºï¼‰
 
-©¦ ©À©¤©¤ GameView.h/cpp # ÓÎÏ·ÊÓÍ¼
+â”‚ â”œâ”€â”€ GameView.h/cpp # æ¸¸æˆè§†å›¾
 
-©¦ ©À©¤©¤ PlayFieldView.h/cpp # ÓÎÏ·ÇøÓòÊÓÍ¼£¨field²¿·Ö£©
+â”‚ â”œâ”€â”€ PlayFieldView.h/cpp # æ¸¸æˆåŒºåŸŸè§†å›¾ï¼ˆfieldéƒ¨åˆ†ï¼‰
 
-©¦ ©¸©¤©¤ StackView.h/cpp # ¶ÑµþÇøÓòÊÓÍ¼£¨stack²¿·Ö£©
+â”‚ â””â”€â”€ StackView.h/cpp # å †å åŒºåŸŸè§†å›¾ï¼ˆstackéƒ¨åˆ†ï¼‰
 
-©¦
+â”‚
 
-©À©¤©¤ controllers/ # ¿ØÖÆÆ÷²ã£¨ÒµÎñÂß¼­£©
+â”œâ”€â”€ controllers/ # æŽ§åˆ¶å™¨å±‚ï¼ˆä¸šåŠ¡é€»è¾‘ï¼‰
 
-©¦ ©À©¤©¤ GameController.h/cpp # ÓÎÏ·Ö÷¿ØÖÆÆ÷
+â”‚ â”œâ”€â”€ GameController.h/cpp # æ¸¸æˆä¸»æŽ§åˆ¶å™¨
 
-©¦ ©À©¤©¤ PlayFieldController.h/cpp # fieldÇøÓò¿ØÖÆÆ÷
+â”‚ â”œâ”€â”€ PlayFieldController.h/cpp # fieldåŒºåŸŸæŽ§åˆ¶å™¨
 
-©¦ ©À©¤©¤ StackController.h/cpp # stackÇøÓò¿ØÖÆÆ÷
+â”‚ â”œâ”€â”€ StackController.h/cpp # stackåŒºåŸŸæŽ§åˆ¶å™¨
 
-©¦
+â”‚
 
-©À©¤©¤ configs/ # ¾²Ì¬ÅäÖÃÏà¹ØÀà
+â”œâ”€â”€ configs/ # é™æ€é…ç½®ç›¸å…³ç±»
 
-©¦ ©À©¤©¤ ConfigManager.h/cpp # ÅäÖÃ¹ÜÀíÆ÷
+â”‚ â”œâ”€â”€ ConfigManager.h/cpp # é…ç½®ç®¡ç†å™¨
 
-©¦ ©À©¤©¤ loaders/ # ÅäÖÃ¼ÓÔØÆ÷
+â”‚ â”œâ”€â”€ loaders/ # é…ç½®åŠ è½½å™¨
 
-©¦ ©¦ ©¸©¤©¤ LevelConfigLoader.h/cpp # ¹Ø¿¨ÅäÖÃ¼ÓÔØÆ÷£¨´ÓJSON¼ÓÔØ£©
+â”‚ â”‚ â””â”€â”€ LevelConfigLoader.h/cpp # å…³å¡é…ç½®åŠ è½½å™¨ï¼ˆä»ŽJSONåŠ è½½ï¼‰
 
-©¦ ©¸©¤©¤ models/ # ÅäÖÃÊý¾ÝÄ£ÐÍ
+â”‚ â””â”€â”€ models/ # é…ç½®æ•°æ®æ¨¡åž‹
 
-©¦  |  ©À©¤©¤ LevelConfig.h # ¹Ø¿¨ÅäÖÃ½á¹¹Ìå
+â”‚  |  â”œâ”€â”€ LevelConfig.h # å…³å¡é…ç½®ç»“æž„ä½“
 
-©¦  | ©À©¤©¤ CardResConfig.h/cpp # ¿¨ÅÆ×ÊÔ´ÅäÖÃ
+â”‚  | â”œâ”€â”€ CardResConfig.h/cpp # å¡ç‰Œèµ„æºé…ç½®
 
-©¦  |  ©¸©¤©¤ CardResConfigManager.h/cpp # ¿¨ÅÆ×ÊÔ´ÅäÖÃ¹ÜÀíÆ÷
+â”‚  |  â””â”€â”€ CardResConfigManager.h/cpp # å¡ç‰Œèµ„æºé…ç½®ç®¡ç†å™¨
 
-©¦
+â”‚
 
-©À©¤©¤ managers/ # ¹ÜÀíÆ÷²ã
+â”œâ”€â”€ managers/ # ç®¡ç†å™¨å±‚
 
-©¦ ©¸©¤©¤ UndoManager.h/cpp # ³·Ïú¹ÜÀíÆ÷£¨¹ÜÀí²Ù×÷ÀúÊ·£©
+â”‚ â””â”€â”€ UndoManager.h/cpp # æ’¤é”€ç®¡ç†å™¨ï¼ˆç®¡ç†æ“ä½œåŽ†å²ï¼‰
 
-©¦
+â”‚
 
-©À©¤©¤ services/ # ·þÎñ²ã
+â”œâ”€â”€ services/ # æœåŠ¡å±‚
 
-©¦ ©¸©¤©¤ GameModelFromLevelGenerator.h/cpp # ÓÎÏ·Ä£ÐÍÉú³É·þÎñ
+â”‚ â””â”€â”€ GameModelFromLevelGenerator.h/cpp # æ¸¸æˆæ¨¡åž‹ç”ŸæˆæœåŠ¡
 
-©¦
+â”‚
 
-©¸©¤©¤ utils/ # ¹¤¾ßÀà£¨´ýÀ©Õ¹£©
+â””â”€â”€ utils/ # å·¥å…·ç±»ï¼ˆå¾…æ‰©å±•ï¼‰
 
-1.ÈçºÎÐÂÔöÒ»¸ö¿¨ÅÆÀàÐÍ\
-¿ÉÒÔÀ©Õ¹CardModelÊý¾Ý
-£¬¿ÉÒÔÐÂÔöÒ»¸ö¿¨ÅÆÀàÐÍ
+1.å¦‚ä½•æ–°å¢žä¸€ä¸ªå¡ç‰Œç±»åž‹\
+å¯ä»¥æ‰©å±•CardModelæ•°æ®
+ï¼Œå¯ä»¥æ–°å¢žä¸€ä¸ªå¡ç‰Œç±»åž‹
 - enum CardType {\
     CT_NORMAL = 0,\
-    NEW£¬\
-    NEW£¬\
+    NEWï¼Œ\
+    NEWï¼Œ\
 };\
-ÔÚ¿¨ÅÆÀàÀïÌí¼ÓÒ»¸öÐÂµÄË½ÓÐÊôÐÔcardtype
+åœ¨å¡ç‰Œç±»é‡Œæ·»åŠ ä¸€ä¸ªæ–°çš„ç§æœ‰å±žæ€§cardtype
 
-À©Õ¹CardView,ÐÂÔöÒ»¸öÌØÊâÅÆÏÔÊ¾µÄº¯Êý¼´¿É
+æ‰©å±•CardView,æ–°å¢žä¸€ä¸ªç‰¹æ®Šç‰Œæ˜¾ç¤ºçš„å‡½æ•°å³å¯
 
-2.Ò»¸öÐÂÀàÐÍµÄ»ØÍË¹¦ÄÜ\
-¿ÉÒÔÐÂÔöÒ»¸ö°´Å¥½«¹¦ÄÜºÍÐÂµÄ»ØÍË¹¦ÄÜ,ÔÚGameControllerÌí¼ÓÐÂ¹¦ÄÜµÄµ÷ÓÃ½Ó¿Ú
+2.ä¸€ä¸ªæ–°ç±»åž‹çš„å›žé€€åŠŸèƒ½\
+å¯ä»¥æ–°å¢žä¸€ä¸ªæŒ‰é’®å°†åŠŸèƒ½å’Œæ–°çš„å›žé€€åŠŸèƒ½,åœ¨GameControlleræ·»åŠ æ–°åŠŸèƒ½çš„è°ƒç”¨æŽ¥å£
