@@ -94,3 +94,10 @@ Classes/
 
 2.一个新类型的回退功能\
 可以新增一个按钮将功能和新的回退功能,在GameController添加新功能的调用接口
+
+
+
+demo视频文件
+https://github.com/user-attachments/assets/ec192ebc-d7b9-49db-af4b-91f33f937837
+
+
